@@ -1,26 +1,6 @@
 import heroImg from "@/assets/hero-school.jpg";
 import { ComicCard } from "@/components/ComicCard";
-
-const cards: Array<{
-  title: string;
-  date?: string;
-  description: string;
-  emoji: string;
-  accent: "primary" | "secondary" | "accent" | "orange" | "green";
-}> = [
-  { date: "20 Abr 2025", title: "Chompa de la Generación", description: "Nuestra identidad en una prenda conmemorativa.", emoji: "🧥", accent: "primary" },
-  { title: "Misas de 20 y Becas", description: "USD 1.374,01 recaudados para el Proyecto Silla Roja (Becas Fe y Alegría).", emoji: "🙏", accent: "secondary" },
-  { title: "Misa de Consagración", description: "Consagración de las familias en noviembre.", emoji: "✝️", accent: "accent" },
-  { title: "Dolorosa en la Cumbre", description: "Llevando nuestra fe a lo más alto.", emoji: "⛰️", accent: "orange" },
-  { title: "Dolorosa en el Hogar", description: "Recorrido del busto por 28 hogares de la promoción.", emoji: "🏠", accent: "green" },
-  { title: "Prevención de Violencia", description: "14 charlas dictadas junto a Padres de Familia y el DECE.", emoji: "🛡️", accent: "primary" },
-  { title: "Campaña de Navidad", description: "Donación de víveres, ropa y ayuda económica: Nací para Amar.", emoji: "🎁", accent: "secondary" },
-  { title: "Brigada Médica Gabrielina 2026", description: "Atención de salud y provisión de medicinas.", emoji: "⚕️", accent: "accent" },
-  { title: "Round 1", description: "Noche de música en vivo y reencuentro.", emoji: "🎸", accent: "orange" },
-  { title: "Round 2", description: "Karaoke con banda y pura alegría.", emoji: "🎤", accent: "green" },
-  { title: "Asado de Integración", description: "Uniendo a las familias en torno a la mesa.", emoji: "🔥", accent: "primary" },
-  { title: "Hermandad Promo 2001", description: "25 años caminando juntos, hombres para los demás.", emoji: "🤝", accent: "secondary" },
-];
+import { projects } from "@/data/projects";
 
 const Index = () => {
   return (
@@ -108,8 +88,8 @@ const Index = () => {
           </div>
 
           <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {cards.map((card, i) => (
-              <ComicCard key={card.title} index={i} {...card} />
+            {projects.map((card, i) => (
+              <ComicCard key={card.slug} index={i} {...card} />
             ))}
           </div>
         </div>
