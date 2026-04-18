@@ -6,6 +6,9 @@ import { cn } from "@/lib/utils";
 
 const tiltMap = ["-rotate-2", "rotate-1", "-rotate-1", "rotate-2", "-rotate-[1.5deg]", "rotate-[1.5deg]"];
 
+// Comic-style image classes
+const comicImageClasses = "w-full h-full object-cover border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] contrast-125 sepia-10";
+
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const project = projects.find((p) => p.slug === slug);
@@ -71,13 +74,23 @@ const ProjectDetail = () => {
 
             <div className="relative">
               <div className="panel overflow-hidden rotate-2 bg-background">
-                <div className="relative aspect-[4/3] flex items-center justify-center bg-muted">
-                  <div className="absolute inset-0 halftone opacity-40" />
-                  <span className="text-[10rem] drop-shadow-[5px_5px_0_hsl(var(--ink))] relative z-10" aria-hidden>
-                    {project.emoji}
-                  </span>
-                  <span className="absolute bottom-3 right-3 text-xs font-bold uppercase tracking-wider bg-background text-foreground px-2.5 py-1.5 rounded-md border-2 border-foreground">
-                    Ilustración principal
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  {project.images && project.images.length > 0 ? (
+                    <img
+                      src={project.images[0]}
+                      alt={project.title}
+                      className={comicImageClasses}
+                    />
+                  ) : (
+                    <>
+                      <div className="absolute inset-0 halftone opacity-40" />
+                      <span className="text-[10rem] drop-shadow-[5px_5px_0_hsl(var(--ink))] relative z-10 flex items-center justify-center h-full" aria-hidden>
+                        {project.emoji}
+                      </span>
+                    </>
+                  )}
+                  <span className="absolute bottom-3 right-3 text-xs font-bold uppercase tracking-wider bg-background text-foreground px-2.5 py-1.5 rounded-md border-2 border-foreground z-10">
+                    {project.images && project.images.length > 0 ? "Fotoprincipal" : "Ilustración principal"}
                   </span>
                 </div>
               </div>
@@ -103,13 +116,23 @@ const ProjectDetail = () => {
 
           <div className="grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
             <div className="panel overflow-hidden -rotate-1">
-              <div className={cn("relative aspect-square flex items-center justify-center", accentBg[project.accent])}>
-                <div className="absolute inset-0 halftone opacity-40" />
-                <span className="text-9xl drop-shadow-[4px_4px_0_hsl(var(--ink))] relative z-10" aria-hidden>
-                  {project.emoji}
-                </span>
-                <span className="absolute bottom-3 left-3 text-xs font-bold uppercase tracking-wider bg-background text-foreground px-2.5 py-1.5 rounded-md border-2 border-foreground">
-                  Foto de la historia
+              <div className={cn("relative aspect-square overflow-hidden", accentBg[project.accent])}>
+                {project.images && project.images.length > 1 ? (
+                  <img
+                    src={project.images[1]}
+                    alt={`${project.title} - imagen secundaria`}
+                    className={comicImageClasses}
+                  />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 halftone opacity-40" />
+                    <span className="text-9xl drop-shadow-[4px_4px_0_hsl(var(--ink))] relative z-10 flex items-center justify-center h-full" aria-hidden>
+                      {project.emoji}
+                    </span>
+                  </>
+                )}
+                <span className="absolute bottom-3 left-3 text-xs font-bold uppercase tracking-wider bg-background text-foreground px-2.5 py-1.5 rounded-md border-2 border-foreground z-10">
+                  {project.images && project.images.length > 1 ? "Foto adicional" : "Foto de la historia"}
                 </span>
               </div>
             </div>
@@ -154,11 +177,21 @@ const ProjectDetail = () => {
                   tiltMap[i % tiltMap.length]
                 )}
               >
-                <div className={cn("relative aspect-[4/3] flex items-center justify-center", accentBg[item.accent])}>
-                  <div className="absolute inset-0 halftone opacity-40" />
-                  <span className="text-7xl drop-shadow-[3px_3px_0_hsl(var(--ink))] relative z-10" aria-hidden>
-                    📸
-                  </span>
+                <div className={cn("relative aspect-[4/3] overflow-hidden", accentBg[item.accent])}>
+                  {project.images && project.images.length > i + 2 ? (
+                    <img
+                      src={project.images[i + 2]}
+                      alt={item.caption}
+                      className={comicImageClasses}
+                    />
+                  ) : (
+                    <>
+                      <div className="absolute inset-0 halftone opacity-40" />
+                      <span className="text-7xl drop-shadow-[3px_3px_0_hsl(var(--ink))] relative z-10 flex items-center justify-center h-full" aria-hidden>
+                        📸
+                      </span>
+                    </>
+                  )}
                 </div>
                 {/* Sticker caption */}
                 <figcaption

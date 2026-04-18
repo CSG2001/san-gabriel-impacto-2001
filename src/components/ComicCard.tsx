@@ -9,6 +9,8 @@ interface ComicCardProps {
   emoji: string;
   accent: "primary" | "secondary" | "accent" | "orange" | "green";
   index: number;
+  image?: string;
+  images?: string[];
 }
 
 const accentMap: Record<ComicCardProps["accent"], string> = {
@@ -21,9 +23,13 @@ const accentMap: Record<ComicCardProps["accent"], string> = {
 
 const tiltMap = ["-rotate-1", "rotate-1", "-rotate-[0.5deg]", "rotate-[0.5deg]"];
 
-export const ComicCard = ({ slug, title, date, description, emoji, accent, index }: ComicCardProps) => {
+// Comic-style image classes
+const comicImageClasses = "w-full h-44 object-cover border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] contrast-125 sepia-10";
+
+export const ComicCard = ({ slug, title, date, description, emoji, accent, index, image, images }: ComicCardProps) => {
   const tilt = tiltMap[index % tiltMap.length];
-  const Wrapper: any = slug ? Link : "article";
+  const displayImage = image || (images && images.length > 0 ? images[0] : undefined);
+  const Wrapper: React.ComponentType<{ to?: string; className?: string; "aria-label"?: string; children?: React.ReactNode }> = slug ? Link : "article";
   const wrapperProps = slug ? { to: `/proyecto/${slug}` } : {};
 
   return (
@@ -35,14 +41,30 @@ export const ComicCard = ({ slug, title, date, description, emoji, accent, index
       )}
       aria-label={slug ? `Ver detalles de ${title}` : undefined}
     >
-      <div className={cn("relative h-44 flex items-center justify-center border-b-[3px] border-foreground", accentMap[accent])}>
+      <div className={cn("relative h-44 border-b-[3px] border-foreground overflow-hidden", accentMap[accent])}>
         <div className="absolute inset-0 halftone opacity-40" />
-        <span className="text-7xl drop-shadow-[3px_3px_0_hsl(var(--ink))] relative z-10" aria-hidden>
-          {emoji}
-        </span>
-        <span className="absolute bottom-2 right-3 text-[10px] font-bold uppercase tracking-wider bg-background/90 text-foreground px-2 py-1 rounded-md border-2 border-foreground">
-          Foto / Ilustración
-        </span>
+        {displayImage ? (
+          <>
+            <img
+              src={displayImage}
+              alt={title}
+              className={comicImageClasses}
+            />
+            {/* Emoji como etiqueta en esquina */}
+            <div className="absolute -top-2 -right-2 w-12 h-12 bg-background border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rounded-full flex items-center justify-center text-2xl z-10 transform rotate-12">
+              {emoji}
+            </div>
+          </>
+        ) : (
+          <span className="text-7xl drop-shadow-[3px_3px_0_hsl(var(--ink))] relative z-10 flex items-center justify-center h-full" aria-hidden>
+            {emoji}
+          </span>
+        )}
+        {displayImage && (
+          <span className="absolute bottom-2 right-3 text-[10px] font-bold uppercase tracking-wider bg-background/90 text-foreground px-2 py-1 rounded-md border-2 border-foreground z-20">
+            Foto
+          </span>
+        )}
       </div>
 
       <div className="p-5 flex-1 flex flex-col gap-2">

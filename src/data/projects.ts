@@ -8,6 +8,7 @@ export interface Project {
   emoji: string;
   accent: Accent;
   story: string;
+  images: string[];
   gallery: { caption: string; accent: Accent }[];
 }
 
@@ -19,6 +20,10 @@ export const projects: Project[] = [
     description: "Nuestra identidad en una prenda conmemorativa.",
     emoji: "🧥",
     accent: "primary",
+    images: [
+      "/images/chompa-grupo-1.jpeg",
+      "/images/chompa-detalle-2.jpeg",
+    ],
     story:
       "Quisimos llevar puesto el orgullo gabrielino. La chompa nació de largas conversaciones entre compañeros que querían un símbolo tangible de estos 25 años: bordados, colores institucionales y un diseño pensado en hermandad. Cada prenda entregada fue un abrazo entre promociones, padres e hijos.",
     gallery: [
@@ -34,6 +39,10 @@ export const projects: Project[] = [
     description: "USD 1.374,01 recaudados para el Proyecto Silla Roja (Becas Fe y Alegría).",
     emoji: "🙏",
     accent: "secondary",
+    images: [
+      "/images/misa-grupo-1.jpeg",
+      "/images/misa-abrazados-2.jpeg",
+    ],
     story:
       "Cada mes 20 nos reunimos a celebrar la Eucaristía. De esos encuentros nació la voluntad de aportar al Proyecto Silla Roja: becas para niños y jóvenes de Fe y Alegría que comparten nuestro sueño de educación con sentido. Recaudamos USD 1.374,01 que se transforman en oportunidades reales.",
     gallery: [
@@ -49,6 +58,10 @@ export const projects: Project[] = [
     description: "Consagración de las familias en noviembre.",
     emoji: "✝️",
     accent: "accent",
+    images: [
+      "/images/consagracion-grupo-1.jpeg",
+      "/images/consagracion-familias-2.jpeg",
+    ],
     story:
       "En noviembre consagramos a nuestras familias al cuidado de la Dolorosa. Una celebración íntima, profundamente espiritual, que reunió a esposas, hijos y padres de la promo en torno a la fe que nos formó.",
     gallery: [
@@ -64,6 +77,10 @@ export const projects: Project[] = [
     description: "Llevando nuestra fe a lo más alto.",
     emoji: "⛰️",
     accent: "orange",
+    images: [
+      "/images/cumbre-busto-1.jpeg",
+      "/images/cumbre-grupo-2.jpeg",
+    ],
     story:
       "Subimos juntos para entregar a la Virgen el esfuerzo, las luchas y los sueños de la promoción. La Dolorosa coronó la cumbre como símbolo de que la fe nos sostiene incluso en las pendientes más duras.",
     gallery: [
@@ -79,6 +96,10 @@ export const projects: Project[] = [
     description: "Recorrido del busto por 28 hogares de la promoción.",
     emoji: "🏠",
     accent: "green",
+    images: [
+      "/images/hogar-altar-1.jpeg",
+      "/images/hogar-familia-2.jpeg",
+    ],
     story:
       "El busto de la Dolorosa visitó 28 hogares de la promoción. Una semana en cada casa, oraciones en familia, anécdotas compartidas y la certeza de que ningún gabrielino camina solo.",
     gallery: [
@@ -94,6 +115,10 @@ export const projects: Project[] = [
     description: "14 charlas dictadas junto a Padres de Familia y el DECE.",
     emoji: "🛡️",
     accent: "primary",
+    images: [
+      "/images/charla-orador-1.jpeg",
+      "/images/charla-interaccion-2.jpeg",
+    ],
     story:
       "Junto al DECE y los Padres de Familia organizamos 14 charlas para prevenir violencia en entornos escolares y familiares. Profesionales de la promo aportaron su tiempo y conocimiento para cuidar a las nuevas generaciones gabrielinas.",
     gallery: [
@@ -109,6 +134,10 @@ export const projects: Project[] = [
     description: "Donación de víveres, ropa y ayuda económica: Nací para Amar.",
     emoji: "🎁",
     accent: "secondary",
+    images: [
+      "/images/navidad-voluntarios-1.jpeg",
+      "/images/navidad-donaciones-2.jpeg",
+    ],
     story:
       "Bajo el lema 'Nací para Amar' organizamos la campaña navideña: víveres, ropa y aportes económicos para familias que más lo necesitan. La promo entera se movilizó para que nadie se quedara sin Navidad.",
     gallery: [
@@ -124,6 +153,11 @@ export const projects: Project[] = [
     description: "Atención de salud y provisión de medicinas.",
     emoji: "⚕️",
     accent: "accent",
+    images: [
+      "/images/brigada-clinica-1.jpeg",
+      "/images/brigada-atencion-2.jpeg",
+      "/images/brigada-medicos-3.jpeg",
+    ],
     story:
       "Médicos, odontólogos y profesionales de la salud de la promoción se unieron para llevar atención y medicinas a comunidades vulnerables. Una jornada que recordó por qué fuimos formados como hombres para los demás.",
     gallery: [
@@ -139,6 +173,9 @@ export const projects: Project[] = [
     description: "Noche de música en vivo y reencuentro.",
     emoji: "🎸",
     accent: "orange",
+    images: [
+      "/images/round1-cantantes-1.jpeg",
+    ],
     story:
       "El primer Round fue puro reencuentro: música en vivo, anécdotas del colegio y abrazos largos. La banda de la promo demostró que el talento gabrielino sigue intacto después de 25 años.",
     gallery: [
@@ -154,6 +191,10 @@ export const projects: Project[] = [
     description: "Karaoke con banda y pura alegría.",
     emoji: "🎤",
     accent: "green",
+    images: [
+      "/images/round2-karaoke-1.jpeg",
+      "/images/round2-brindis-2.jpeg",
+    ],
     story:
       "El Round 2 elevó la energía: karaoke con banda en vivo, clásicos de los 90 y voces que creían dormidas. Una noche para reírnos de nosotros mismos y celebrar lo que somos.",
     gallery: [
@@ -169,6 +210,10 @@ export const projects: Project[] = [
     description: "Uniendo a las familias en torno a la mesa.",
     emoji: "🔥",
     accent: "primary",
+    images: [
+      "/images/asado-grupal-1.jpeg",
+      "/images/asado-familias-2.jpeg",
+    ],
     story:
       "Un asado para que las familias se conozcan, los hijos jueguen y la promo siga tejiendo lazos. Porque ser gabrielino también es compartir el pan —y la parrilla— con los nuestros.",
     gallery: [
@@ -184,6 +229,7 @@ export const projects: Project[] = [
     description: "25 años caminando juntos, hombres para los demás.",
     emoji: "🤝",
     accent: "secondary",
+    images: [],
     story:
       "25 años después, seguimos siendo promoción. Hemos celebrado bodas, acompañado pérdidas, festejado logros y sostenido caídas. Esta hermandad es la herencia más valiosa que San Gabriel nos dejó.",
     gallery: [

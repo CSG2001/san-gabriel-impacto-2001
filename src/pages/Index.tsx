@@ -95,23 +95,47 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="bg-primary text-primary-foreground border-t-[4px] border-foreground relative overflow-hidden">
-        <div className="absolute inset-0 halftone opacity-20" />
-        <div className="container relative mx-auto px-4 py-14 text-center space-y-6">
-          <div className="mx-auto w-28 h-28 rounded-full bg-secondary text-secondary-foreground border-[4px] border-foreground comic-shadow flex items-center justify-center">
-            <span className="font-display text-3xl">SG</span>
-          </div>
-          <p className="text-xs uppercase tracking-widest opacity-80">Logo del Colegio · Placeholder</p>
-          <h3 className="font-display text-3xl md:text-5xl text-secondary drop-shadow-[3px_3px_0_hsl(var(--ink))]">
-            Hombres para los demás.
-          </h3>
-          <p className="font-display text-2xl text-accent">— Promo 2001 —</p>
-          <p className="text-sm opacity-75 pt-4">
-            © {new Date().getFullYear()} · Colegio San Gabriel · Quito, Ecuador
-          </p>
-        </div>
-      </footer>
+       {/* FOOTER */}
+       <footer className="bg-primary text-primary-foreground border-t-[4px] border-foreground relative overflow-hidden">
+         <div className="absolute inset-0 halftone opacity-20" />
+         <div className="container relative mx-auto px-4 py-14 text-center space-y-6">
+           <div className="mx-auto w-28 h-28 rounded-full bg-secondary text-secondary-foreground border-[4px] border-foreground comic-shadow flex items-center justify-center">
+             <span className="font-display text-3xl">SG</span>
+           </div>
+           <p className="text-xs uppercase tracking-widest opacity-80">Logo del Colegio · Placeholder</p>
+           <h3 className="font-display text-3xl md:text-5xl text-secondary drop-shadow-[3px_3px_0_hsl(var(--ink))]">
+             Hombres para los demás.
+           </h3>
+           <p className="font-display text-2xl text-accent">— Promo 2001 —</p>
+           <p className="text-sm opacity-75 pt-4">
+             © {new Date().getFullYear()} · Colegio San Gabriel · Quito, Ecuador
+           </p>
+         </div>
+       </footer>
+
+       {/* NIMBLERSOFT FOOTER */}
+       <footer className="bg-background text-foreground border-t-[4px] border-foreground py-8">
+         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+           <div className="flex items-center gap-3">
+             {/* Logo placeholder - using a simple styled div that matches the page style */}
+             <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground border-2 border-foreground flex items-center justify-center font-display font-bold text-sm">
+               N
+             </div>
+             <span className="font-display text-lg font-semibold">Nimblersoft</span>
+           </div>
+           <p className="text-sm text-muted-foreground text-center md:text-right">
+             Desarrollado con Inteligencia Artificial por{" "}
+             <a
+               href="https://www.nimblersoft.com"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="font-semibold underline underline-offset-2 hover:text-primary transition-colors"
+             >
+               Nimblersoft
+             </a>
+           </p>
+         </div>
+       </footer>
     </div>
   );
 };
