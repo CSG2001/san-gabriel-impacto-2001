@@ -1,7 +1,8 @@
-import { ReactNode } from "react";
+import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 interface ComicCardProps {
+  slug?: string;
   title: string;
   date?: string;
   description: string;
@@ -20,11 +21,20 @@ const accentMap: Record<ComicCardProps["accent"], string> = {
 
 const tiltMap = ["-rotate-1", "rotate-1", "-rotate-[0.5deg]", "rotate-[0.5deg]"];
 
-export const ComicCard = ({ title, date, description, emoji, accent, index }: ComicCardProps) => {
+export const ComicCard = ({ slug, title, date, description, emoji, accent, index }: ComicCardProps) => {
   const tilt = tiltMap[index % tiltMap.length];
+  const Wrapper: any = slug ? Link : "article";
+  const wrapperProps = slug ? { to: `/proyecto/${slug}` } : {};
+
   return (
-    <article className={cn("panel overflow-hidden flex flex-col", tilt)}>
-      {/* Illustration placeholder */}
+    <Wrapper
+      {...wrapperProps}
+      className={cn(
+        "panel overflow-hidden flex flex-col cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-secondary",
+        tilt
+      )}
+      aria-label={slug ? `Ver detalles de ${title}` : undefined}
+    >
       <div className={cn("relative h-44 flex items-center justify-center border-b-[3px] border-foreground", accentMap[accent])}>
         <div className="absolute inset-0 halftone opacity-40" />
         <span className="text-7xl drop-shadow-[3px_3px_0_hsl(var(--ink))] relative z-10" aria-hidden>
@@ -43,7 +53,12 @@ export const ComicCard = ({ title, date, description, emoji, accent, index }: Co
         )}
         <h3 className="text-xl leading-tight">{title}</h3>
         <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+        {slug && (
+          <span className="mt-2 self-start font-display text-sm text-primary">
+            Leer más →
+          </span>
+        )}
       </div>
-    </article>
+    </Wrapper>
   );
 };
