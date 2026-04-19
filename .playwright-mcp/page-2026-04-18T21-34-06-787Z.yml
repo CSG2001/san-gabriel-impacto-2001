@@ -1,0 +1,152 @@
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - generic [ref=e8]: ★ 1901 — 2026 · 25 Años ★
+          - heading "San Gabriel Promo 2001 25 Años de Impacto" [level=1] [ref=e9]:
+            - text: San Gabriel
+            - text: Promo 2001
+            - text: 25 Años de Impacto
+          - paragraph [ref=e10]: Celebrando nuestra hermandad y compromiso con los demás.
+          - generic [ref=e11]:
+            - link "Ver Logros" [ref=e12] [cursor=pointer]:
+              - /url: "#galeria"
+            - link "Nuestra Historia" [ref=e13] [cursor=pointer]:
+              - /url: "#intro"
+        - generic [ref=e14]:
+          - img "Ilustración estilo cómic del Colegio San Gabriel celebrando 25 años de la Promo 2001" [ref=e16]
+          - generic [ref=e17]: ¡PUM!
+          - generic [ref=e18]: ★ Gabrielinos ★
+    - generic [ref=e21]:
+      - generic [ref=e22]: 120 años · Milagro de la Dolorosa
+      - heading "Ser Gabrielino es una huella que no se borra." [level=2] [ref=e23]
+      - paragraph [ref=e24]:
+        - text: A 120 años del Milagro de la Dolorosa, nuestra promoción honra una herencia de fe, servicio y hermandad. Veinticinco años después de cruzar las puertas del colegio, seguimos siendo
+        - strong [ref=e25]: hombres para los demás
+        - text: ": construyendo, acompañando y multiplicando el bien en cada rincón donde la vida nos llevó."
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e29]: Nuestros Logros
+        - heading "25 Años en Acción" [level=2] [ref=e30]
+        - paragraph [ref=e31]: Cada panel es una historia. Cada historia, un acto de amor por los demás.
+      - generic [ref=e32]:
+        - link "Ver detalles de Chompa de la Generación" [ref=e33] [cursor=pointer]:
+          - /url: /proyecto/chompa-de-la-generacion
+          - generic [ref=e34]:
+            - generic [ref=e36]: 🧥
+            - generic [ref=e37]: Foto / Ilustración
+          - generic [ref=e38]:
+            - generic [ref=e39]: 20 Abr 2025
+            - heading "Chompa de la Generación" [level=3] [ref=e40]
+            - paragraph [ref=e41]: Nuestra identidad en una prenda conmemorativa.
+            - generic [ref=e42]: Leer más →
+        - link "Ver detalles de Misas de 20 y Becas" [ref=e43] [cursor=pointer]:
+          - /url: /proyecto/misas-de-20-y-becas
+          - generic [ref=e44]:
+            - generic [ref=e46]: 🙏
+            - generic [ref=e47]: Foto / Ilustración
+          - generic [ref=e48]:
+            - heading "Misas de 20 y Becas" [level=3] [ref=e49]
+            - paragraph [ref=e50]: USD 1.374,01 recaudados para el Proyecto Silla Roja (Becas Fe y Alegría).
+            - generic [ref=e51]: Leer más →
+        - link "Ver detalles de Misa de Consagración" [ref=e52] [cursor=pointer]:
+          - /url: /proyecto/misa-de-consagracion
+          - generic [ref=e53]:
+            - generic [ref=e55]: ✝️
+            - generic [ref=e56]: Foto / Ilustración
+          - generic [ref=e57]:
+            - heading "Misa de Consagración" [level=3] [ref=e58]
+            - paragraph [ref=e59]: Consagración de las familias en noviembre.
+            - generic [ref=e60]: Leer más →
+        - link "Ver detalles de Dolorosa en la Cumbre" [ref=e61] [cursor=pointer]:
+          - /url: /proyecto/dolorosa-en-la-cumbre
+          - generic [ref=e62]:
+            - generic [ref=e64]: ⛰️
+            - generic [ref=e65]: Foto / Ilustración
+          - generic [ref=e66]:
+            - heading "Dolorosa en la Cumbre" [level=3] [ref=e67]
+            - paragraph [ref=e68]: Llevando nuestra fe a lo más alto.
+            - generic [ref=e69]: Leer más →
+        - link "Ver detalles de Dolorosa en el Hogar" [ref=e70] [cursor=pointer]:
+          - /url: /proyecto/dolorosa-en-el-hogar
+          - generic [ref=e71]:
+            - generic [ref=e73]: 🏠
+            - generic [ref=e74]: Foto / Ilustración
+          - generic [ref=e75]:
+            - heading "Dolorosa en el Hogar" [level=3] [ref=e76]
+            - paragraph [ref=e77]: Recorrido del busto por 28 hogares de la promoción.
+            - generic [ref=e78]: Leer más →
+        - link "Ver detalles de Prevención de Violencia" [ref=e79] [cursor=pointer]:
+          - /url: /proyecto/prevencion-de-violencia
+          - generic [ref=e80]:
+            - generic [ref=e82]: 🛡️
+            - generic [ref=e83]: Foto / Ilustración
+          - generic [ref=e84]:
+            - heading "Prevención de Violencia" [level=3] [ref=e85]
+            - paragraph [ref=e86]: 14 charlas dictadas junto a Padres de Familia y el DECE.
+            - generic [ref=e87]: Leer más →
+        - link "Ver detalles de Campaña de Navidad" [ref=e88] [cursor=pointer]:
+          - /url: /proyecto/campana-de-navidad
+          - generic [ref=e89]:
+            - generic [ref=e91]: 🎁
+            - generic [ref=e92]: Foto / Ilustración
+          - generic [ref=e93]:
+            - heading "Campaña de Navidad" [level=3] [ref=e94]
+            - paragraph [ref=e95]: "Donación de víveres, ropa y ayuda económica: Nací para Amar."
+            - generic [ref=e96]: Leer más →
+        - link "Ver detalles de Brigada Médica Gabrielina 2026" [ref=e97] [cursor=pointer]:
+          - /url: /proyecto/brigada-medica-gabrielina-2026
+          - generic [ref=e98]:
+            - generic [ref=e100]: ⚕️
+            - generic [ref=e101]: Foto / Ilustración
+          - generic [ref=e102]:
+            - heading "Brigada Médica Gabrielina 2026" [level=3] [ref=e103]
+            - paragraph [ref=e104]: Atención de salud y provisión de medicinas.
+            - generic [ref=e105]: Leer más →
+        - link "Ver detalles de Round 1" [ref=e106] [cursor=pointer]:
+          - /url: /proyecto/round-1
+          - generic [ref=e107]:
+            - generic [ref=e109]: 🎸
+            - generic [ref=e110]: Foto / Ilustración
+          - generic [ref=e111]:
+            - heading "Round 1" [level=3] [ref=e112]
+            - paragraph [ref=e113]: Noche de música en vivo y reencuentro.
+            - generic [ref=e114]: Leer más →
+        - link "Ver detalles de Round 2" [ref=e115] [cursor=pointer]:
+          - /url: /proyecto/round-2
+          - generic [ref=e116]:
+            - generic [ref=e118]: 🎤
+            - generic [ref=e119]: Foto / Ilustración
+          - generic [ref=e120]:
+            - heading "Round 2" [level=3] [ref=e121]
+            - paragraph [ref=e122]: Karaoke con banda y pura alegría.
+            - generic [ref=e123]: Leer más →
+        - link "Ver detalles de Asado de Integración" [ref=e124] [cursor=pointer]:
+          - /url: /proyecto/asado-de-integracion
+          - generic [ref=e125]:
+            - generic [ref=e127]: 🔥
+            - generic [ref=e128]: Foto / Ilustración
+          - generic [ref=e129]:
+            - heading "Asado de Integración" [level=3] [ref=e130]
+            - paragraph [ref=e131]: Uniendo a las familias en torno a la mesa.
+            - generic [ref=e132]: Leer más →
+        - link "Ver detalles de Hermandad Promo 2001" [ref=e133] [cursor=pointer]:
+          - /url: /proyecto/hermandad-promo-2001
+          - generic [ref=e134]:
+            - generic [ref=e136]: 🤝
+            - generic [ref=e137]: Foto / Ilustración
+          - generic [ref=e138]:
+            - heading "Hermandad Promo 2001" [level=3] [ref=e139]
+            - paragraph [ref=e140]: 25 años caminando juntos, hombres para los demás.
+            - generic [ref=e141]: Leer más →
+    - contentinfo [ref=e142]:
+      - generic [ref=e144]:
+        - generic [ref=e146]: SG
+        - paragraph [ref=e147]: Logo del Colegio · Placeholder
+        - heading "Hombres para los demás." [level=3] [ref=e148]
+        - paragraph [ref=e149]: — Promo 2001 —
+        - paragraph [ref=e150]: © 2026 · Colegio San Gabriel · Quito, Ecuador
