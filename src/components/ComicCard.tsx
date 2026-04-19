@@ -9,7 +9,6 @@ interface ComicCardProps {
   emoji: string;
   accent: "primary" | "secondary" | "accent" | "orange" | "green";
   index: number;
-  image?: string;
   images?: string[];
 }
 
@@ -26,9 +25,9 @@ const tiltMap = ["-rotate-1", "rotate-1", "-rotate-[0.5deg]", "rotate-[0.5deg]"]
 // Comic-style image classes
 const comicImageClasses = "w-full h-44 object-cover border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] contrast-125 sepia-10";
 
-export const ComicCard = ({ slug, title, date, description, emoji, accent, index, image, images }: ComicCardProps) => {
+export const ComicCard = ({ slug, title, date, description, emoji, accent, index, images }: ComicCardProps) => {
   const tilt = tiltMap[index % tiltMap.length];
-  const displayImage = image || (images && images.length > 0 ? images[0] : undefined);
+  const displayImage = images && images.length > 0 ? images[0] : undefined;
   const Wrapper: React.ComponentType<{ to?: string; className?: string; "aria-label"?: string; children?: React.ReactNode }> = slug ? Link : "article";
   const wrapperProps = slug ? { to: `/proyecto/${slug}` } : {};
 
@@ -58,11 +57,6 @@ export const ComicCard = ({ slug, title, date, description, emoji, accent, index
         ) : (
           <span className="text-7xl drop-shadow-[3px_3px_0_hsl(var(--ink))] relative z-10 flex items-center justify-center h-full" aria-hidden>
             {emoji}
-          </span>
-        )}
-        {displayImage && (
-          <span className="absolute bottom-2 right-3 text-[10px] font-bold uppercase tracking-wider bg-background/90 text-foreground px-2 py-1 rounded-md border-2 border-foreground z-20">
-            Foto
           </span>
         )}
       </div>

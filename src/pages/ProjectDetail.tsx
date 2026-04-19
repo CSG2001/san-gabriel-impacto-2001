@@ -13,10 +13,10 @@ const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const project = projects.find((p) => p.slug === slug);
 
-  useEffect(() => {
-    window.scrollTo({ top: 0 });
-    if (project) document.title = `${project.title} · Promo 2001 San Gabriel`;
-  }, [project]);
+   useEffect(() => {
+     window.scrollTo({ top: 0 });
+     if (project) document.title = `${project.title} · Promo 2001 San Gabriel`;
+   }, [project]);
 
   if (!project) {
     return (
@@ -37,8 +37,8 @@ const ProjectDetail = () => {
     );
   }
 
-  return (
-    <div className="min-h-screen">
+   return (
+     <div className="min-h-screen">
       {/* HERO DE IMPACTO */}
       <header className={cn("relative overflow-hidden border-b-[4px] border-foreground", accentBg[project.accent])}>
         <div className="absolute inset-0 halftone opacity-25" />
@@ -168,15 +168,19 @@ const ProjectDetail = () => {
             </p>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-            {project.gallery.map((item, i) => {
-              const imageIndex = i + 2;
-              const imageUrl = project.images && project.images.length > imageIndex ? project.images[imageIndex] : null;
+           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+             {project.gallery.map((item, i) => {
+               let imageUrl: string | null = null;
+               // Access images by literal indices to prevent tree-shaking
+               if (i === 0 && project.images.length > 2) imageUrl = project.images[2];
+               else if (i === 1 && project.images.length > 3) imageUrl = project.images[3];
+               else if (i === 2 && project.images.length > 4) imageUrl = project.images[4];
+               else if (i === 3 && project.images.length > 5) imageUrl = project.images[5];
 
-              return (
-                <figure
-                  key={i}
-                  className={cn(
+               return (
+                 <figure
+                   key={i}
+                   className={cn(
                     "panel overflow-hidden relative",
                     tiltMap[i % tiltMap.length]
                   )}

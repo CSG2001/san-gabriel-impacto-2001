@@ -42,6 +42,7 @@ bun run preview   # Preview production build
 
 ## Notes
 
+- **Always use bun** - Do not use npm or yarn. Run all commands with `bun` (e.g., `bun install`, `bun run dev`).
 - Dev server uses `lovable-tagger` plugin (only in development mode)
 - Deduplicates react/react-dom/@tanstack packages
 - No pre-commit hooks configured

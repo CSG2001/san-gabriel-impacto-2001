@@ -34,11 +34,11 @@ const Index = () => {
           <div className="relative">
             <div className="panel overflow-hidden rotate-2">
               <img
-                src={heroImg}
-                alt="Ilustración estilo cómic del Colegio San Gabriel celebrando 25 años de la Promo 2001"
+                src="/images/hero.jpg"
+                alt="San Gabriel Promo 2001 - 25 Años de Impacto"
                 width={1536}
                 height={1024}
-                className="w-full h-auto block"
+                className="w-full h-auto block border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] contrast-125 sepia-10"
               />
             </div>
             <div className="absolute -top-4 -left-4 bg-orange text-orange-foreground font-display text-2xl px-4 py-2 rounded-xl border-[3px] border-foreground comic-shadow -rotate-12">
