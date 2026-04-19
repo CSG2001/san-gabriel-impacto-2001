@@ -34,3 +34,11 @@ bun run preview
 - React Router
 - TanStack React Query
 - Recharts
+
+## Deployment
+
+See **AGENTS.md** for full deployment documentation using `gh-pages-deploy` skill.
+
+- Auto-deploy: push to `main` triggers GitHub Pages build
+- Live site: https://csg2001.github.io/
+- Use `gh-pages-deploy` skill for guided deployment workflow

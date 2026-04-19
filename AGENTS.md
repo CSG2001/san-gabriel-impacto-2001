@@ -114,10 +114,10 @@ interface Project {
 
 ## Deployment
 
-- **Host:** promo2001.nimblersoft.com (GitHub Pages)
+- **Host:** GitHub Pages (csg2001.github.io)
 - **Vite base:** `/` (root domain)
-- **CI:** `.github/workflows/deploy.yml` — push to `main` → `bun install` → `bun run build` → `peaceiris/actions-gh-pages` publishes `./dist`
-- **Manual deploy:** `bun run build && gh-pages -d dist`
+- **CI:** `.github/workflows/deploy.yml` — push to `main` triggers `bun install` → `bun run build` → `peaceiris/actions-gh-pages` publishes `./dist` to `gh-pages` branch
+- **Manual deploy:** Use `gh-pages-deploy` skill for streamlined commit, push, and verification workflow
 
 ## Testing
 
