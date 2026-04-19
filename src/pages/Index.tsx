@@ -59,7 +59,12 @@ const Index = () => {
             <img 
               src="/images/logo-2001.png" 
               alt="Logo 2001 Espejado" 
-              className="absolute left-[-2rem] md:left-[-1rem] top-1/2 -translate-y-1/2 w-48 -scale-x-100 opacity-30 z-0 pointer-events-none" 
+              className="absolute left-[-2rem] md:left-[-1rem] top-1/2 -translate-y-1/2 w-48 -scale-x-100 opacity-20 z-0 pointer-events-none" 
+            />
+            <img 
+              src="/images/dolorosa.jpg" 
+              alt="La Dolorosa" 
+              className="absolute right-[-2rem] md:right-[-1rem] top-1/2 -translate-y-1/2 w-48 opacity-20 z-0 pointer-events-none" 
             />
             <div className="relative z-10">
               <span className="font-display text-secondary-foreground bg-secondary inline-block px-3 py-1 rounded-md border-[3px] border-foreground text-sm mb-4">
@@ -138,7 +143,8 @@ const Index = () => {
        <footer className="bg-background text-foreground border-t-[4px] border-foreground py-8">
          <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
 <div className="flex items-center gap-3">
-              <svg viewBox="0 0 32 32" className="w-10 h-10" xmlns="http://www.w3.org/2000/svg">
+              <a href="https://www.nimblersoft.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                <svg viewBox="0 0 32 32" className="w-10 h-10" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stopColor="#22d3ee" />
@@ -154,9 +160,12 @@ const Index = () => {
                   d="M16 2 C16 10 22 16 30 16 C22 16 16 22 16 30 C16 22 10 16 2 16 C10 16 16 10 16 2 Z"
                   fill="url(#logo-grad)"
                   mask="url(#n-mask)"
-                />
+/>
               </svg>
-             <span className="font-display text-lg font-semibold">Nimblersoft</span>
+              </a>
+              <a href="https://www.nimblersoft.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity font-display text-lg font-semibold">
+                <span className="font-display text-lg font-semibold">Nimblersoft</span>
+              </a>
            </div>
            <p className="text-sm text-muted-foreground text-center md:text-right">
              Desarrollado con Inteligencia Artificial por{" "}
