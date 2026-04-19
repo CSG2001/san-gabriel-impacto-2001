@@ -23,6 +23,8 @@ export const projects: Project[] = [
     images: [
       "/images/chompa-grupo-1.jpeg",
       "/images/chompa-detalle-2.jpeg",
+      "/images/chompa-detalle-3.jpeg",
+      "/images/chompa-equipo-4.jpeg",
     ],
     story:
       "Quisimos llevar puesto el orgullo gabrielino. La chompa nació de largas conversaciones entre compañeros que querían un símbolo tangible de estos 25 años: bordados, colores institucionales y un diseño pensado en hermandad. Cada prenda entregada fue un abrazo entre promociones, padres e hijos.",
@@ -42,6 +44,8 @@ export const projects: Project[] = [
     images: [
       "/images/misa-grupo-1.jpeg",
       "/images/misa-abrazados-2.jpeg",
+      "/images/misa-mensual-3.jpeg",
+      "/images/misa-grupo-4.jpeg",
     ],
     story:
       "Cada mes 20 nos reunimos a celebrar la Eucaristía. De esos encuentros nació la voluntad de aportar al Proyecto Silla Roja: becas para niños y jóvenes de Fe y Alegría que comparten nuestro sueño de educación con sentido. Recaudamos USD 1.374,01 que se transforman en oportunidades reales.",
@@ -61,6 +65,8 @@ export const projects: Project[] = [
     images: [
       "/images/consagracion-grupo-1.jpeg",
       "/images/consagracion-familias-2.jpeg",
+      "/images/consagracion-altar-3.jpeg",
+      "/images/consagracion-gratitud-4.jpeg",
     ],
     story:
       "En noviembre consagramos a nuestras familias al cuidado de la Dolorosa. Una celebración íntima, profundamente espiritual, que reunió a esposas, hijos y padres de la promo en torno a la fe que nos formó.",
@@ -80,6 +86,8 @@ export const projects: Project[] = [
     images: [
       "/images/cumbre-busto-1.jpeg",
       "/images/cumbre-grupo-2.jpeg",
+      "/images/cumbre-camino-3.jpeg",
+      "/images/cumbre-cumbre-4.jpeg",
     ],
     story:
       "Subimos juntos para entregar a la Virgen el esfuerzo, las luchas y los sueños de la promoción. La Dolorosa coronó la cumbre como símbolo de que la fe nos sostiene incluso en las pendientes más duras.",
@@ -99,6 +107,8 @@ export const projects: Project[] = [
     images: [
       "/images/hogar-altar-1.jpeg",
       "/images/hogar-familia-2.jpeg",
+      "/images/hogar-ninos-3.jpeg",
+      "/images/hogar-despedida-4.jpeg",
     ],
     story:
       "El busto de la Dolorosa visitó 28 hogares de la promoción. Una semana en cada casa, oraciones en familia, anécdotas compartidas y la certeza de que ningún gabrielino camina solo.",
@@ -118,6 +128,8 @@ export const projects: Project[] = [
     images: [
       "/images/charla-orador-1.jpeg",
       "/images/charla-interaccion-2.jpeg",
+      "/images/charla-grupo-3.jpeg",
+      "/images/charla-taller-4.jpeg",
     ],
     story:
       "Junto al DECE y los Padres de Familia organizamos 14 charlas para prevenir violencia en entornos escolares y familiares. Profesionales de la promo aportaron su tiempo y conocimiento para cuidar a las nuevas generaciones gabrielinas.",
@@ -137,6 +149,8 @@ export const projects: Project[] = [
     images: [
       "/images/navidad-voluntarios-1.jpeg",
       "/images/navidad-donaciones-2.jpeg",
+      "/images/navidad-empaque-3.jpeg",
+      "/images/navidad-comunidad-4.jpeg",
     ],
     story:
       "Bajo el lema 'Nací para Amar' organizamos la campaña navideña: víveres, ropa y aportes económicos para familias que más lo necesitan. La promo entera se movilizó para que nadie se quedara sin Navidad.",
@@ -157,6 +171,7 @@ export const projects: Project[] = [
       "/images/brigada-clinica-1.jpeg",
       "/images/brigada-atencion-2.jpeg",
       "/images/brigada-medicos-3.jpeg",
+      "/images/brigada-equipo-4.jpeg",
     ],
     story:
       "Médicos, odontólogos y profesionales de la salud de la promoción se unieron para llevar atención y medicinas a comunidades vulnerables. Una jornada que recordó por qué fuimos formados como hombres para los demás.",
@@ -175,6 +190,9 @@ export const projects: Project[] = [
     accent: "orange",
     images: [
       "/images/round1-cantantes-1.jpeg",
+      "/images/round1-banda-2.jpeg",
+      "/images/round1-pista-3.jpeg",
+      "/images/round1-escenario-4.jpeg",
     ],
     story:
       "El primer Round fue puro reencuentro: música en vivo, anécdotas del colegio y abrazos largos. La banda de la promo demostró que el talento gabrielino sigue intacto después de 25 años.",
@@ -194,6 +212,8 @@ export const projects: Project[] = [
     images: [
       "/images/round2-karaoke-1.jpeg",
       "/images/round2-brindis-2.jpeg",
+      "/images/round2-cantantes-3.jpeg",
+      "/images/round2-banda-4.jpeg",
     ],
     story:
       "El Round 2 elevó la energía: karaoke con banda en vivo, clásicos de los 90 y voces que creían dormidas. Una noche para reírnos de nosotros mismos y celebrar lo que somos.",
@@ -213,6 +233,8 @@ export const projects: Project[] = [
     images: [
       "/images/asado-grupal-1.jpeg",
       "/images/asado-familias-2.jpeg",
+      "/images/asado-parrilla-3.jpeg",
+      "/images/asado-reunion-4.jpeg",
     ],
     story:
       "Un asado para que las familias se conozcan, los hijos jueguen y la promo siga tejiendo lazos. Porque ser gabrielino también es compartir el pan —y la parrilla— con los nuestros.",

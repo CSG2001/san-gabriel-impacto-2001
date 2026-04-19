@@ -169,41 +169,46 @@ const ProjectDetail = () => {
           </div>
 
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-            {project.gallery.map((item, i) => (
-              <figure
-                key={i}
-                className={cn(
-                  "panel overflow-hidden relative",
-                  tiltMap[i % tiltMap.length]
-                )}
-              >
-                <div className={cn("relative aspect-[4/3] overflow-hidden", accentBg[item.accent])}>
-                  {project.images && project.images.length > i + 2 ? (
-                    <img
-                      src={project.images[i + 2]}
-                      alt={item.caption}
-                      className={comicImageClasses}
-                    />
-                  ) : (
-                    <>
-                      <div className="absolute inset-0 halftone opacity-40" />
-                      <span className="text-7xl drop-shadow-[3px_3px_0_hsl(var(--ink))] relative z-10 flex items-center justify-center h-full" aria-hidden>
-                        📸
-                      </span>
-                    </>
-                  )}
-                </div>
-                {/* Sticker caption */}
-                <figcaption
+            {project.gallery.map((item, i) => {
+              const imageIndex = i + 2;
+              const imageUrl = project.images && project.images.length > imageIndex ? project.images[imageIndex] : null;
+
+              return (
+                <figure
+                  key={i}
                   className={cn(
-                    "absolute -bottom-3 left-4 right-4 bg-background text-foreground font-display text-base px-3 py-2 rounded-lg border-[3px] border-foreground comic-shadow-sm text-center",
-                    i % 2 === 0 ? "-rotate-2" : "rotate-2"
+                    "panel overflow-hidden relative",
+                    tiltMap[i % tiltMap.length]
                   )}
                 >
-                  {item.caption}
-                </figcaption>
-              </figure>
-            ))}
+                  <div className={cn("relative aspect-[4/3] overflow-hidden", accentBg[item.accent])}>
+                    {imageUrl ? (
+                      <img
+                        src={imageUrl}
+                        alt={item.caption}
+                        className={comicImageClasses}
+                      />
+                    ) : (
+                      <>
+                        <div className="absolute inset-0 halftone opacity-40" />
+                        <span className="text-7xl drop-shadow-[3px_3px_0_hsl(var(--ink))] relative z-10 flex items-center justify-center h-full" aria-hidden>
+                          📸
+                        </span>
+                      </>
+                    )}
+                  </div>
+                  {/* Sticker caption */}
+                  <figcaption
+                    className={cn(
+                      "absolute -bottom-3 left-4 right-4 bg-background text-foreground font-display text-base px-3 py-2 rounded-lg border-[3px] border-foreground comic-shadow-sm text-center",
+                      i % 2 === 0 ? "-rotate-2" : "rotate-2"
+                    )}
+                  >
+                    {item.caption}
+                  </figcaption>
+                </figure>
+              );
+            })}
           </div>
 
           <div className="text-center mt-16">
