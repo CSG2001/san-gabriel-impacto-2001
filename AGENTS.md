@@ -150,3 +150,4 @@ interface Project {
 - Deduplicates react, react-dom, @tanstack/react-query.
 - No .env files — fully static, no secrets.
 - No pre-commit hooks configured.
+- **GitHub Pages Routing**: Uses the `404.html` redirect hack to support deep links in a Single Page Application (SPA) environment. The restoration script is in `index.html`.
