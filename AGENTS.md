@@ -52,6 +52,11 @@ src/
 │   ├── Index.tsx        # Home: hero + Sponsors Section + 13-project gallery grid
 │   ├── ProjectDetail.tsx# /proyecto/:slug — hero, story, gallery, back button
 │   └── NotFound.tsx     # 404
+├── public/
+│   └── images/
+│       ├── logo-2001.png    # Promo logo
+│       ├── logo-colegio.png # School logo
+│       └── promo/           # 10 Pop-Art promotional images for social media
 └── test/
     ├── example.test.ts
     └── setup.ts
